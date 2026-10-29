@@ -1,0 +1,50 @@
+# 忽略虚拟环境（两种常见命名都排除）
+.venv/
+venv/
+
+# 忽略版本控制文件
+.git/
+.gitignore
+.python-version
+
+# 忽略构建产物
+*.pyc
+__pycache__/
+static_build/
+
+# 忽略IDE配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 忽略日志文件
+*.log
+logs/
+
+# 忽略敏感信息文件
+.env
+*.env
+github_token.txt
+config.json
+
+# 忽略本地临时目录与 IDE 注入文件
+.tmp/
+.roo/
+*.bak
+*.log
+
+# 忽略临时文件
+*.tmp
+*.temp
+
+# 忽略Docker构建过程中不需要的文件
+docker-compose.yml
+*.Dockerfile
+
+# 保留应用运行所需的所有文件
+# default/ 文件夹包含默认配置和背景图片，需要保留
+# templates/ 文件夹包含Flask模板，需要保留
+# config.json 会在应用启动时自动创建或从默认配置复制，不需要忽略
+# background.jpg 会在应用启动时自动创建或从默认配置复制，不需要忽略
