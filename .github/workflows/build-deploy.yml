@@ -46,7 +46,11 @@ jobs:
           pip install -r requirements.txt
 
       # 4. 运行构建脚本生成静态文件
+      # GITHUB_TOKEN 用于读取贡献日历等需认证的接口
       - name: Generate static files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TZ: Asia/Shanghai
         run: python build_static.py
 
       # 5. 创建输出目录
