@@ -31,13 +31,13 @@ jobs:
     steps:
       # 1. 检出代码库
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # 2. 设置Python环境
       - name: Set up Python
-        uses: actions/setup-python@v6.0.0
+        uses: actions/setup-python@v7.1.0
         with:
-          python-version: '3.10.9'
+          python-version: '3.10.22'
 
       # 3. 安装项目依赖
       - name: Install dependencies
@@ -59,15 +59,15 @@ jobs:
 
       # 6. 设置GitHub Pages
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6.0.0
 
       # 7. 上传构建产物
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: './output'
 
       # 8. 部署到GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.1
